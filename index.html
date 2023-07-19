@@ -35,18 +35,67 @@
     </div>
 
     <div class="col-12 p-3 text-light">
-      <h2>Showing results for <span id="result-text"></span></h2>
-      <div id="results"></div>
+      <h3>Search results for <span class="city-name mb-1 mt-2 bolder" id="results-city"></span></h3>
+      <div class="row ml-2  bg-success  rounded">
+        <div class="col-sm-12" id="current-weather">
+            <p>Date:<span id="date"></span></p>
+            <img id="icon" src="" alt="weather icon">
+            <p>Temp:<span id="temp"></span></p>
+            <p>Wind:<span id="wind"></span></p>
+            <p>Humidity:<span id="humidity"></span></p>
+        </div>
+    </div>
     </div>
 
     <div class="col-12 p-3 text-light">
-      <h2>5-Day Forecast:<span id="result-text"></span></h2>
-      <div id="forecast"></div>
+      <h3>5-Day Forecast:</h3>
+      <div class="row text-light">
+          <div class="col-sm-2 bg-success forecast text-white rounded" >
+              <img src="./assets/magic-ball.png" alt="magic glass ball" width=75% height=100%>
+          </div>
+          <div class="col-sm-2 bg-success forecast text-white rounded" >
+              <p>Date:<span id="date0"></span></p>
+              <img id="icon0" src="" alt="weather icon">
+              <p>Temp:<span id="temp0"></span></p>
+              <p>Wind:<span id="wind0"></span></p>
+              <p>Humidity:<span id="humidity0"></span></p>
+          </div>
+          <div class="col-sm-2 bg-success forecast text-white rounded" >
+              <p>Date:<span id="date1"></span></p>
+              <img id="icon1" src="" alt="weather icon">
+              <p>Temp:<span id="temp1"></span></p>
+              <p>Wind:<span id="wind1"></span></p>
+              <p>Humidity:<span id="humidity1"></span></p>
+          </div>
+          <div class="col-sm-2 bg-success forecast text-white rounded">
+              <p>Date:<span id="date2"></span></p>
+              <img id="icon2" src="" alt="weather icon">
+              <p>Temp:<span id="temp2"></span></p>
+              <p>Wind:<span id="wind2"></span></p>
+              <p>Humidity:<span id="humidity2"></span></p>
+          </div>
+          <div class="col-sm-2 bg-success forecast text-white rounded">
+              <p>Date:<span id="date3"></span></p>
+              <img id="icon3" src="" alt="weather icon">
+              <p>Temp:<span id="temp3"></span></p>
+              <p>Wind:<span id="wind3"></span></p>
+              <p>Humidity:<span id="humidity3"></span></p>
+          </div>
+          <div class="col-sm-2 bg-success forecast text-white rounded" >
+              <p>Date:<span id="date4"></span></p>
+              <img id="icon4" src="" alt="weather icon">
+              <p>Temp:<span id="temp4"></span></p>
+              <p>Wind:<span id="wind4"></span></p>
+              <p>Humidity:<span id="humidity4"></span></p>
+          </div>
+      </div>
     </div>
 
     <div class="col-12 p-3 text-light">
-      <h2>Recently Viewed<span id="result-text"></span></h2>
-      <div id="search-history"></div>
+      <h2>Recently Viewed</h2>
+      <div id="history">
+        <ul id="history-list" class="p-2"></ul>
+      </div>
     </div>
   </div>
 
@@ -60,3 +109,4 @@
 </body>
 
 </html>
+
