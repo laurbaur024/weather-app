@@ -37,6 +37,7 @@ $("#search-button").on("click", function (event) {
     city = $("#search-input").val().trim()
   }
   weatherToday();
+  checkPast();
 });
 
 function weatherToday() {
