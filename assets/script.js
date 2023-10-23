@@ -52,9 +52,11 @@ function weatherToday() {
     }
   }).then(function (response) {
     console.log(response)
+    temp = Math.floor(response.main.temp)
+    wind = Math.floor(response.wind.speed)
     var iconUrl = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
-    $('#temp').text(` ${response.main.temp} °F`)
-    $("#wind").text(` ${response.wind.speed} MPH`)
+    $('#temp').text(` ${temp} °F`)
+    $("#wind").text(` ${wind} MPH`)
     $("#results-city").text(response.name)
     $('#humidity').text(` ${response.main.humidity} %`)
     icon.setAttribute('src', iconUrl)
@@ -78,32 +80,52 @@ function weatherForecast() {
     console.log(response)
 
     var icon0Url = `https://openweathermap.org/img/w/${response.list[4].weather[0].icon}.png`
-    $('#temp0').text(` ${response.list[4].main.temp} °F`)
-    $("#wind0").text(` ${response.list[4].wind.speed} MPH`)
+    kelvin1 = response.list[4].main.temp
+    farenheit1 =  (kelvin1 - 273.15) * 9/5 + 32 
+    temp1 = Math.floor(farenheit1)
+    wind1 = Math.floor(response.list[4].wind.speed)
+    $('#temp0').text(` ${temp1} °F`)
+    $("#wind0").text(` ${wind1} MPH`)
     $('#humidity0').text(` ${response.list[4].main.humidity} %`)
     icon0.setAttribute('src', icon0Url)
 
     var icon1Url = `https://openweathermap.org/img/w/${response.list[12].weather[0].icon}.png`
-    $('#temp1').text(` ${response.list[12].main.temp} °F`)
-    $("#wind1").text(` ${response.list[12].wind.speed} MPH`)
+    kelvin2 = response.list[12].main.temp
+    farenheit2 =  (kelvin2 - 273.15) * 9/5 + 32 
+    temp2 = Math.floor(farenheit2)
+    wind2 = Math.floor(response.list[12].wind.speed)
+    $('#temp1').text(` ${temp2} °F`)
+    $("#wind1").text(` ${wind2} MPH`)
     $('#humidity1').text(` ${response.list[12].main.humidity} %`)
     icon1.setAttribute('src', icon1Url)
 
     var icon2Url = `https://openweathermap.org/img/w/${response.list[20].weather[0].icon}.png`
-    $('#temp2').text(` ${response.list[20].main.temp} °F`)
-    $("#wind2").text(` ${response.list[20].wind.speed} MPH`)
+    kelvin3 = response.list[20].main.temp
+    farenheit3 =  (kelvin3 - 273.15) * 9/5 + 32 
+    temp3 = Math.floor(farenheit3)
+    wind3 = Math.floor(response.list[20].wind.speed)
+    $('#temp2').text(` ${temp3} °F`)
+    $("#wind2").text(` ${wind3} MPH`)
     $('#humidity2').text(` ${response.list[20].main.humidity} %`)
     icon2.setAttribute('src', icon2Url)
 
     var icon3Url = `https://openweathermap.org/img/w/${response.list[28].weather[0].icon}.png`
-    $('#temp3').text(` ${response.list[28].main.temp} °F`)
-    $("#wind3").text(` ${response.list[28].wind.speed} MPH`)
+    kelvin4 = response.list[28].main.temp
+    farenheit4 =  (kelvin4 - 273.15) * 9/5 + 32 
+    temp4 = Math.floor(farenheit4)
+    wind4 = Math.floor(response.list[28].wind.speed)
+    $('#temp3').text(` ${temp4} °F`)
+    $("#wind3").text(` ${wind4} MPH`)
     $('#humidity3').text(` ${response.list[28].main.humidity} %`)
     icon3.setAttribute('src', icon3Url)
 
     var icon4Url = `https://openweathermap.org/img/w/${response.list[36].weather[0].icon}.png`
-    $('#temp4').text(` ${response.list[36].main.temp} °F`)
-    $("#wind4").text(` ${response.list[36].wind.speed} MPH`)
+    kelvin5 = response.list[36].main.temp
+    farenheit5 =  (kelvin5 - 273.15) * 9/5 + 32 
+    temp5 = Math.floor(farenheit5)
+    wind5 = Math.floor(response.list[36].wind.speed)
+    $('#temp4').text(` ${temp5} °F`)
+    $("#wind4").text(` ${wind5} MPH`)
     $('#humidity4').text(` ${response.list[36].main.humidity} %`)
     icon4.setAttribute('src', icon4Url)
 
